@@ -14,7 +14,7 @@ RUN apt-get update
 run apt-get install -y wget
 
 # install g++
-run apt-get install -y g++
+run apt-get install -y g++-4.6
 
 # install libc6-dev
 run apt-get install -y libc6-dev
