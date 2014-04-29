@@ -3,7 +3,7 @@
 # VERSION 1.0
 
 # use the ubuntu base image provided by dotCloud
-FROM ubuntu
+FROM ubuntu:12.04
 MAINTAINER Foo Face, fooface@narf.com
 
 # make sure the package repository is up to date
@@ -14,25 +14,21 @@ RUN apt-get update
 RUN apt-get install -y wget
 
 # install make
-RUN apt-get install -y make
-
+# RUN apt-get install -y make
 # install gcc
 # RUN apt-get install -y gcc
-
 # install libc6
 # RUN apt-get install -y libc6
-
 # install libc6-dev
 # RUN apt-get install -y libc6-dev
-
 # install g++
 # RUN apt-get install -y g++-4.6
 
 # install build-essential
-RUN apt-get install -y build-essential tcl8.5
+RUN apt-get install -y build-essential
 
 # install tcl8.5
-# RUN apt-get install -y tcl8.5
+RUN apt-get install -y tcl8.5
 
 # install redis
 RUN wget http://download.redis.io/redis-stable.tar.gz
