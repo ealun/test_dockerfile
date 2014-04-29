@@ -13,19 +13,13 @@ RUN apt-get update
 # install wget (required for redis installation)
 run apt-get install -y wget
 
-# install make (required for redis installation)
-run apt-get install -y make
-
-# install gcc (required for redis installation)
-run apt-get install -y gcc
+# install build-essential
+run apt-get install -y build-essential
 
 # install redis
 RUN wget http://download.redis.io/redis-stable.tar.gz
 RUN tar xvzf redis-stable.tar.gz
 RUN cd redis-stable && make && make install
-
-# install emacs
-RUN apt-get install -y emacs23
 
 # launch redis when starting the image
 ENTRYPOINT ["redis-server"]
