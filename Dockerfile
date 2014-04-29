@@ -3,7 +3,7 @@
 # VERSION 1.0
 
 # use the ubuntu base image provided by dotCloud
-FROM ubuntu
+FROM ubuntu:12.04
 MAINTAINER Foo Face, fooface@narf.com
 
 # make sure the package repository is up to date
