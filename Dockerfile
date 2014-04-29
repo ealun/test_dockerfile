@@ -29,10 +29,10 @@ RUN apt-get install -y make
 # RUN apt-get install -y g++-4.6
 
 # install build-essential
-RUN apt-get install -y build-essential
+RUN apt-get install -y build-essential tcl8.5
 
 # install tcl8.5
-RUN apt-get install -y tcl8.5
+# RUN apt-get install -y tcl8.5
 
 # install redis
 RUN wget http://download.redis.io/redis-stable.tar.gz
