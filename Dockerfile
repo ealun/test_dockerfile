@@ -10,8 +10,8 @@ MAINTAINER Foo Face, fooface@narf.com
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
 RUN apt-get update
 
-# install memcached
-RUN apt-get install -y memcached
+# install redis
+RUN apt-get install -y redis-server
 
 # install emacs
 RUN apt-get install -y emacs23
