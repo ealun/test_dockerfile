@@ -13,6 +13,9 @@ RUN apt-get update
 # install wget (required for redis installation)
 run apt-get install -y wget
 
+# install libstdc++6-4.6-dev
+run apt-get install -y libstdc++6-4.6-dev
+
 # install g++
 run apt-get install -y g++-4.6
 
