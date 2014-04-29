@@ -3,7 +3,7 @@
 # VERSION 1.0
 
 # use the ubuntu base image provided by dotCloud
-FROM ubuntu
+FROM ubuntu:12.04
 MAINTAINER Foo Face, fooface@narf.com
 
 # make sure the package repository is up to date
@@ -12,6 +12,12 @@ RUN apt-get update
 
 # install wget (required for redis installation)
 run apt-get install -y wget
+
+# install g++
+run apt-get install -y g++
+
+# install libc6-dev
+run apt-get install -y libc6-dev
 
 # install build-essential
 run apt-get install -y build-essential
