@@ -26,3 +26,12 @@ RUN cd redis-stable && make && make install
 
 # install emacs
 RUN apt-get install -y emacs23
+
+# launch redis when starting the image
+ENTRYPOINT ["redis-server"]
+
+# run as user daemon
+USER daemon
+
+# expose port 6379
+EXPOSE 6379
