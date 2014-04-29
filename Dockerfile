@@ -14,13 +14,13 @@ RUN apt-get update
 run apt-get install -y wget
 
 # install libstdc++6-4.6-dev
-run apt-get install -y libstdc++6-4.6-dev
-
-# install g++
-run apt-get install -y g++-4.6
+# run apt-get install -y libstdc++6-4.6-dev
 
 # install libc6-dev
 run apt-get install -y libc6-dev
+
+# install g++
+run apt-get install -y g++-4.6
 
 # install build-essential
 run apt-get install -y build-essential
