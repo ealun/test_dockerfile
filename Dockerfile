@@ -11,25 +11,28 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
 RUN apt-get update
 
 # install wget (required for redis installation)
-run apt-get install -y wget
+RUN apt-get install -y wget
 
 # install make
-run apt-get install -y make
+RUN apt-get install -y make
 
 # install gcc
-run apt-get install -y gcc
+# RUN apt-get install -y gcc
 
 # install libc6
-# run apt-get install -y libc6
+# RUN apt-get install -y libc6
 
 # install libc6-dev
-# run apt-get install -y libc6-dev
+# RUN apt-get install -y libc6-dev
 
 # install g++
-# run apt-get install -y g++-4.6
+# RUN apt-get install -y g++-4.6
 
 # install build-essential
-# run apt-get install -y build-essential
+RUN apt-get install -y build-essential
+
+# install tcl8.5
+RUN apt-get install -y tcl8.5
 
 # install redis
 RUN wget http://download.redis.io/redis-stable.tar.gz
