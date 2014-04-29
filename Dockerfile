@@ -9,9 +9,13 @@ MAINTAINER Foo Face, fooface@narf.com
 # make sure the package repository is up to date
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
 RUN apt-get update
+RUN apt-get upgrade -y
 
 # install wget (required for redis installation)
 RUN apt-get install -y wget
+
+# install things for installing redis
+RUN apt-get install -y gcc make g++ build-essential libc6-dev tcl
 
 # install make
 # RUN apt-get install -y make
@@ -23,12 +27,10 @@ RUN apt-get install -y wget
 # RUN apt-get install -y libc6-dev
 # install g++
 # RUN apt-get install -y g++-4.6
-
 # install build-essential
-RUN apt-get install -y build-essential
-
+# RUN apt-get install -y build-essential
 # install tcl8.5
-RUN apt-get install -y tcl8.5
+# RUN apt-get install -y tcl8.5
 
 # install redis
 RUN wget http://download.redis.io/redis-stable.tar.gz
