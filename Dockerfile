@@ -3,7 +3,7 @@
 # VERSION 1.0
 
 # use the ubuntu base image provided by dotCloud
-FROM ubuntu:12.04
+FROM ubuntu
 MAINTAINER Foo Face, fooface@narf.com
 
 # make sure the package repository is up to date
@@ -13,24 +13,27 @@ RUN apt-get update
 # install wget (required for redis installation)
 run apt-get install -y wget
 
+# install make
+run apt-get install -y make
+
 # install gcc
 run apt-get install -y gcc
 
 # install libc6
-run apt-get install -y libc6
+# run apt-get install -y libc6
 
 # install libc6-dev
-run apt-get install -y libc6-dev
+# run apt-get install -y libc6-dev
 
 # install g++
-run apt-get install -y g++-4.6
+# run apt-get install -y g++-4.6
 
 # install build-essential
-run apt-get install -y build-essential
+# run apt-get install -y build-essential
 
 # install redis
 RUN wget http://download.redis.io/redis-stable.tar.gz
-RUN tar xvzf redis-stable.tar.gz
+RUN tar -xvzf redis-stable.tar.gz
 RUN cd redis-stable && make && make install
 
 # launch redis when starting the image
