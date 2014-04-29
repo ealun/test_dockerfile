@@ -14,34 +14,22 @@ RUN apt-get upgrade -y
 # install wget (required for redis installation)
 RUN apt-get install -y wget
 
-# install things for installing redis
-RUN apt-get install -y gcc make g++ build-essential libc6-dev tcl
-
 # install make
-# RUN apt-get install -y make
+RUN apt-get install -y make
+
 # install gcc
-# RUN apt-get install -y gcc
-# install libc6
-# RUN apt-get install -y libc6
-# install libc6-dev
-# RUN apt-get install -y libc6-dev
-# install g++
-# RUN apt-get install -y g++-4.6
-# install build-essential
-# RUN apt-get install -y build-essential
-# install tcl8.5
-# RUN apt-get install -y tcl8.5
+RUN apt-get install -y gcc
 
 # install redis
-RUN wget http://download.redis.io/redis-stable.tar.gz
-RUN tar -xvzf redis-stable.tar.gz
-RUN cd redis-stable && make && make install
+# RUN wget http://download.redis.io/redis-stable.tar.gz
+# RUN tar -xvzf redis-stable.tar.gz
+# RUN cd redis-stable && make && make install
 
 # launch redis when starting the image
-ENTRYPOINT ["redis-server"]
+# ENTRYPOINT ["redis-server"]
 
 # run as user daemon
-USER daemon
+# USER daemon
 
 # expose port 6379
-EXPOSE 6379
+# EXPOSE 6379
